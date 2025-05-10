@@ -1,0 +1,47 @@
+{
+    "target": "192.168.2.137",
+    "hosts": [
+        {
+            "ip": "192.168.2.137",
+            "state": "up",
+            "ports": [
+                {
+                    "port": 22,
+                    "state": "open",
+                    "service": "ssh"
+                },
+                {
+                    "port": 135,
+                    "state": "open",
+                    "service": "msrpc"
+                },
+                {
+                    "port": 137,
+                    "state": "filtered",
+                    "service": "netbios-ns"
+                },
+                {
+                    "port": 139,
+                    "state": "open",
+                    "service": "netbios-ssn"
+                },
+                {
+                    "port": 445,
+                    "state": "open",
+                    "service": "microsoft-ds"
+                },
+                {
+                    "port": 903,
+                    "state": "open",
+                    "service": "iss-console-mgr"
+                },
+                {
+                    "port": 913,
+                    "state": "open",
+                    "service": "apex-edge"
+                }
+            ],
+            "os": "Microsoft Windows 10 1607 - 11 23H2"
+        }
+    ]
+}

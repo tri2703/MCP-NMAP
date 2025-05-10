@@ -1,0 +1,47 @@
+{
+    "target": "192.168.220.133",
+    "hosts": [
+        {
+            "ip": "192.168.220.133",
+            "state": "up",
+            "ports": [
+                {
+                    "port": 21,
+                    "state": "open",
+                    "service": "ftp"
+                },
+                {
+                    "port": 53,
+                    "state": "open",
+                    "service": "domain"
+                },
+                {
+                    "port": 80,
+                    "state": "open",
+                    "service": "http"
+                },
+                {
+                    "port": 135,
+                    "state": "open",
+                    "service": "msrpc"
+                },
+                {
+                    "port": 139,
+                    "state": "open",
+                    "service": "netbios-ssn"
+                },
+                {
+                    "port": 443,
+                    "state": "open",
+                    "service": "https"
+                },
+                {
+                    "port": 445,
+                    "state": "open",
+                    "service": "microsoft-ds"
+                }
+            ],
+            "os": "Microsoft Windows Server 2019"
+        }
+    ]
+}

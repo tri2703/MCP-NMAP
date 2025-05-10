@@ -1,0 +1,10 @@
+Host: 192.168.2.137 ()
+State: up
+Protocol: tcp
+Port: 22	State: open	Service: ssh
+Port: 135	State: open	Service: msrpc
+Port: 137	State: filtered	Service: netbios-ns
+Port: 139	State: open	Service: netbios-ssn
+Port: 445	State: open	Service: microsoft-ds
+Port: 903	State: open	Service: vmware-auth
+Port: 913	State: open	Service: vmware-auth

@@ -1,0 +1,27 @@
+{
+    "target": "scanme.nmap.org",
+    "hosts": [
+        {
+            "ip": "45.33.32.156",
+            "state": "up",
+            "ports": [
+                {
+                    "port": 22,
+                    "state": "open",
+                    "service": "ssh"
+                },
+                {
+                    "port": 53,
+                    "state": "open",
+                    "service": "domain"
+                },
+                {
+                    "port": 80,
+                    "state": "open",
+                    "service": "http"
+                }
+            ],
+            "os": "Linux 5.0 - 5.14"
+        }
+    ]
+}

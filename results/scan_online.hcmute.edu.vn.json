@@ -1,0 +1,32 @@
+{
+    "target": "online.hcmute.edu.vn",
+    "hosts": [
+        {
+            "ip": "203.113.147.179",
+            "state": "up",
+            "ports": [
+                {
+                    "port": 53,
+                    "state": "open",
+                    "service": "domain"
+                },
+                {
+                    "port": 80,
+                    "state": "open",
+                    "service": "http"
+                },
+                {
+                    "port": 113,
+                    "state": "closed",
+                    "service": "ident"
+                },
+                {
+                    "port": 443,
+                    "state": "open",
+                    "service": "https"
+                }
+            ],
+            "os": "Linux 5.0 - 5.14"
+        }
+    ]
+}

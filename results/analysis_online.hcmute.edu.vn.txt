@@ -1,0 +1,35 @@
+
+Kết quả scan của Nmap:
+- Mục tiêu: online.hcmute.edu.vn
+- Số host phát hiện: 1
+- Hệ điều hành: ['Linux 5.0 - 5.14']
+- Các cổng mở: Port 53 (domain), Port 80 (http), Port 113 (ident), Port 443 (https)
+
+Phân tích kết quả scan được:
+### **Phân tích kết quả quét Nmap: online.hcmute.edu.vn**
+
+#### **Tóm tắt cổng mở và dịch vụ:**
+1. **Port 53 (DNS - Domain Name System)**  
+   - Dịch vụ DNS mở có thể tiết lộ thông tin về cơ sở hạ tầng mạng.  
+   - **Rủi ro:** Khai thác DNS cache poisoning, zone transfer (nếu không giới hạn), hoặc DDoS amplification.
+
+2. **Port 80 (HTTP - Web)**  
+   - Website chạy giao thức HTTP không mã hóa.  
+   - **Rủi ro:** Dữ liệu truyền tải dễ bị nghe lén (MITM), session hijacking, hoặc lộ thông tin nhạy cảm.
+
+3. **Port 113 (IDENT - Identification Protocol)**  
+   - Ít được sử dụng, thường không cần thiết.  
+   - **Rủi ro:** Có thể bị khai thác để thu thập thông tin người dùng hoặc gây tốn tài nguyên.
+
+4. **Port 443 (HTTPS - Web an toàn)**  
+   - Website hỗ trợ mã hóa TLS/SSL.  
+   - **Rủi ro:** Nếu cấu hình TLS yếu (SSLv3, TLS 1.0/1.1), có thể bị tấn công POODLE, BEAST hoặc downgrade.
+
+---
+
+#### **Rủi ro bảo mật tiềm ẩn:**
+- **Lộ thông tin qua HTTP (Port 80):** Dữ liệu không mã hóa dễ bị đánh cắp.  
+- **DNS (Port 53):** Nếu không được bảo mật, có thể bị giả mạo hoặc khai thác.  
+- **IDENT (Port 113):** Dịch vụ lỗi thời, tiềm ẩn nguy cơ rò rỉ thông tin.  
+- **HTTPS (Port 443):** Cần kiểm tra phiên bản TLS và chứng chỉ
+    

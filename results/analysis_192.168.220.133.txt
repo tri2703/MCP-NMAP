@@ -1,0 +1,31 @@
+
+Kết quả scan của Nmap:
+- Mục tiêu: 192.168.220.133
+- Số host phát hiện: 1
+- Hệ điều hành: ['Microsoft Windows Server 2019']
+- Các cổng mở: Port 21 (ftp), Port 53 (domain), Port 80 (http), Port 135 (msrpc), Port 139 (netbios-ssn), Port 443 (https), Port 445 (microsoft-ds)
+
+Phân tích kết quả scan được:
+### **Phân tích kết quả quét Nmap**  
+
+#### **Tóm tắt dịch vụ đang chạy:**  
+- **FTP (Port 21):** Dịch vụ chia sẻ file, thường có nguy cơ bị tấn công brute-force hoặc khai thác lỗ hổng.  
+- **DNS (Port 53):** Có thể bị khai thác để thực hiện DNS cache poisoning hoặc zone transfer nếu cấu hình không an toàn.  
+- **HTTP (Port 80) & HTTPS (Port 443):** Web server tiềm ẩn lỗ hổng như XSS, SQLi, hoặc RCE nếu không được cập nhật.  
+- **MSRPC (Port 135), NetBIOS (Port 139), SMB (Port 445):** Các dịch vụ Windows thường bị tấn công bằng EternalBlue, brute-force, hoặc khai thác NULL session.  
+
+#### **Rủi ro bảo mật tiềm ẩn:**  
+1. **FTP không an toàn:** Nếu cho phép đăng nhập ẩn danh hoặc sử dụng mật khẩu yếu.  
+2. **SMB/NetBIOS lỗi thời:** Có thể bị khai thác bằng các exploit như EternalBlue (CVE-2017-0144).  
+3. **HTTP/HTTPS không được vá:** Có thể chứa lỗ hổng như Heartbleed (OpenSSL) hoặc các lỗi web thông thường.  
+4. **DNS mở:** Có nguy cơ bị DNS spoofing hoặc thông tin bị rò rỉ.  
+
+#### **Khuyến nghị bảo mật:**  
+✅ **Với FTP:**  
+- Vô hiệu hóa FTP ẩn danh (anonymous login).  
+- Sử dụng SFTP/FTPS thay vì FTP.  
+
+✅ **Với SMB/NetBIOS (Port 139, 445):**  
+- Tắt SMBv1 nếu không cần thiết.  
+- Áp dụng bản
+    
