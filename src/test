@@ -1,0 +1,16 @@
+models = ["deepseek-pro", "deepseek-r1", "deepseek-chat"]
+for model in models:
+    payload["model"] = model
+    try:
+        response = requests.post(
+            "https://api.deepseek.com/v1/chat/completions",
+            headers=headers,
+            json=payload
+        )
+        response.raise_for_status()
+        print(f"Model {model} succeeded:", response.json())
+        break
+    except requests.RequestException as e:
+        print(f"Model {model} failed: {e}")
+        if e.response:
+            print("Response content:", e.response.text)
